@@ -1,0 +1,150 @@
+#summary {
+    margin: 8rem auto 3rem auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 90rem;
+    border-radius: 16px;
+    background-color: #d2d6d9ab;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    height: 22rem;
+}
+  
+#summary h2 {
+    color: #705364;
+    font-size: 4rem;
+    /* font-family: 'Twinkle Star'!important; */
+}
+  
+#summary article {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-align: right;
+    color: white;
+}
+  
+#summary article img {
+    border-radius: 10px;
+    width: 12rem;
+    /* transform: rotateZ(5deg); */
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    margin: auto;
+    /* border-image: url('../images/chess.jpg') 2 round; */
+}
+  
+#summary address {
+    font-weight: bold;
+}
+  
+#summary time {
+    font-weight: bold;
+} 
+  
+main {
+    width: 90%;
+    max-width: 90rem;
+    margin: 3rem auto;
+    background-color: #d2d6d9df;
+    background-color: #d2d6d9d5;
+    background-color: #a1a2a6c1;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid #9A98A6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tag {
+    background-color: #6f8c88da;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-right: 8px;
+}
+
+.quote {
+    background-color: #6f8c88da;
+    border-radius: 4px;
+    padding:30px;
+    height: 10rem;
+    margin: auto;
+}
+
+@media (max-width: 1280px) {
+    #summary { height: 15rem; }
+    #summary h2 { font-size: 2.5rem; }
+    #summary article img { width: 8rem; }
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .myQuotes {
+    display: none;
+    padding: 50px;
+    padding-bottom: 0px;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 4px 10px ;
+    color: black;
+    border: 2px solid #6f8c88;
+    background-color: #6f8c88;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+  }
+  
+  /* On hover, add a background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #6f8c88da;
+  }
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #705364;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

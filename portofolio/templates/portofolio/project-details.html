@@ -1,0 +1,118 @@
+{%  extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    {{ project.title }}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'portofolio/css/project-details.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <section id="summary">
+        <h2>{{ project.title }}</h2>
+        <div>
+            {% for tag in tags %}
+             <span class="tag"> {{ tag.caption }} </span>
+            {% endfor %}
+        </div>
+        <article>
+            <img style="transform: rotateZ(-2deg);" src= "{{ project.main_image.url }}" alt="{{ project.title }}" />
+
+            <!-- <address></address> -->
+            <div> Actualizat la <time> {{ project.date|date:"d M Y" }} </time></div>                     
+        </article>        
+    </section>
+
+    <!-- <main>
+        {{ project.content|linebreaks }}
+    </main> -->
+
+        <div class="slideshow-container">
+            {% for quote in quotes %}
+            <div class="myQuotes fade">
+                <p class="quote">
+                    {{ quote.text }}
+                </p>
+            </div>                
+            {% endfor %}
+
+           
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            {% for quote in quotes %}
+                <span class="dot"></span>             
+            {% endfor %}
+            <!-- <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span> -->
+          </div>
+
+
+    <div style="margin-bottom: 50px;">
+        <form>
+            {{ add_comment_form }}
+            <button type="submit">sssss</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+// let slideIndex = 0;
+// showSlides();
+
+// function showSlides() {
+//   let i;
+//   let slides = document.getElementsByClassName("myQuotes");
+//   let dots = document.getElementsByClassName("dot");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}    
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("myQuotes");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+{% endblock %}

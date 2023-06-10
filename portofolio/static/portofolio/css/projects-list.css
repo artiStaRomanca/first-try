@@ -1,0 +1,40 @@
+#all-projects {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 80rem;
+}
+  
+#all-projects h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #705364;
+    background-color: #93b1add7;
+    background-color: #d2d6d9ab;
+
+    border-radius: 10px;
+    border: 1px solid #705364;
+    padding: 20px;
+    /* margin: 3rem 0; */
+}
+  
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1.5rem;
+}
+  
+.project img {
+    width: 7rem;
+    height: 7rem;
+}
+  
+.project a {
+    height: 22rem;
+    transform-origin: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    background-color: white;
+}

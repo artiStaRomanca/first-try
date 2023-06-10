@@ -1,0 +1,31 @@
+#header {
+  position: sticky;
+  display: flex; 
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 10; 
+  padding: 8px;   
+  /* background-color: #C1A2B4;
+  background-color: #8b6f7ff4;
+  background-color: #687864; */
+  /* background-image: linear-gradient(to bottom, transparent, red),; */
+  font-size: 1.3rem;
+}
+
+#header a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+  
+#header a:hover,
+#header a:active {
+    color: #cf79f1;
+}
+
+
+@media (max-width: 1280px) {
+  #header { height: 60px; font-size: 1rem;}
+}

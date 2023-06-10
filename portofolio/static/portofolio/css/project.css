@@ -1,0 +1,52 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* background-color: #93b1add7; */
+}
+
+.project a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease;
+    width: 100%;
+    background-color: #93b1add7;
+    background-color: #d2d6d9ab;
+    padding: 1rem;
+    border: 1px solid #8b6f7f;
+}
+  
+.project a:hover,
+.project a:active {
+    transform: scale(1.1);
+    /* background-color: #e9f0ee; */
+    border-radius: 8px;
+    color: rgb(16, 55, 64);
+}
+  
+.project img {
+    /* max-width: 8rem; */
+    max-height: 8rem;
+    /* width: auto; */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    /* image-resolution: 300dpi !important; */
+}
+  
+.project h3 {
+    margin: 0.25rem 0;
+}
+  
+.project time {
+    color: #666666;
+    margin: 0.25rem;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+  
+.project:hover time,
+.project:active time {
+    color: white;
+}

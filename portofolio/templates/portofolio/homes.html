@@ -1,0 +1,39 @@
+{%  extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Portofoliul meu
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'portofolio/css/project.css' %}"/>
+    <link rel="stylesheet" href="{% static 'portofolio/css/home.css' %}"/>
+{% endblock %}
+
+{% block content %}    
+    <!-- ! Sectiune 1 - Welcome --> 
+    <section id="welcome">
+        <header>
+            <img src="{% static 'portofolio/images/main_star.jpg' %}" alt="main picture of the site">
+            <h2> Bună, eu sunt Steluța și am câteva proiecte handmade ale căror povești aș vrea să mi le amintesc peste timp. </h2>
+        </header>
+        <!-- <p>Hi, I'm Little Star</p> -->
+    </section>
+
+    <!-- ! Sectiune 2 - Proiecte recente --> 
+    <section id="latest-projects">
+        <h2> Proiecte recente </h2>
+        <ul>
+            {% for project in latest_projects %}
+                {% include "portofolio/project.html" %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- ! Sectiune 3 - About --> 
+    <section id="about">
+        <h2> ce fac</h2>
+        <p> si un pic mai detaliat </p>
+        <p> si inca ceva </p>
+    </section>
+{% endblock %}

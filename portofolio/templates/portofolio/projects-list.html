@@ -1,0 +1,29 @@
+{%  extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Toate proiectele
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'portofolio/css/project.css' %}"/>
+    <link rel="stylesheet" href="{% static 'portofolio/css/projects-list.css' %}"/>
+
+    <style>
+        #header { background-color: red;}
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    {% include 'header.html' %}    
+
+    <section id="all-projects">
+        <h2>Proiectele mele</h2>
+        <ul>
+            {% for project in projects %}
+                {% include "portofolio/project.html" %}            
+            {% endfor %}            
+        </ul>        
+    </section>
+{% endblock %}

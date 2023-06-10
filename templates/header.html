@@ -1,0 +1,20 @@
+{% load static %}
+
+{% block css %} 
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <header id="header">
+        <h1 style="margin:  auto 10px ;">
+            <a href="{% url 'portofolio:home-page' %}" style="font-family: Comforter; color: #122d4d;">
+                arti<span style="color: #a73477;">STA * R</span>omâncă
+            </a>            
+        </h1>
+        <nav>
+            <a href="{% url 'portofolio:projects-list-page' %}">
+                Proiecte
+            </a>
+        </nav> 
+    </header>
+{% endblock %}

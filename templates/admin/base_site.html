@@ -1,0 +1,72 @@
+{% extends "admin/base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ title }} | {% trans "Custom Admin Title" %}{% endblock %}
+{% block extrastyle %}
+     <link rel="stylesheet" type="text/css" href="{% static 'django_custom.css' %}"/>
+     <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+     <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+{% endblock %}
+
+
+<!-- {% block nav-global %}{% endblock %} -->
+{% block breadcrumbs %}{% endblock %}
+
+{% block footer %}
+<div id="footer"></div>
+<script>
+    const changelinks  = document.querySelectorAll('.changelink')
+    for (const el of [...changelinks]) {
+        el.className = "model-details";
+        el.innerHTML = "<i class='fa fa-cog fa-spin' aria-hidden='true'></i> CRUD";
+    }
+
+    const addlinks  = document.querySelectorAll('.addlink')
+    for (const el of [...addlinks]) {
+        el.className = "model-add";
+        el.innerHTML = "<i class='fa fa-plus ' aria-hidden='true'></i> Adăugare";
+    }
+
+const contentRelated =  document.getElementById('content-related')
+if ( contentRelated !==null ) contentRelated.remove();
+
+const h1Element = document.getElementsByTagName("h1")[0];
+if (h1Element.innerText.indexOf("Change") !== -1) { 
+    let newInnerText = h1Element.innerText.replace('Change', 'Editare')
+    h1Element.innerText = newInnerText 
+}
+else if (h1Element.innerText.indexOf("Add") !== -1) {
+    let newInnerText = h1Element.innerText.replace('Add', 'Adăugare')
+    h1Element.innerText = newInnerText 
+}
+else if (h1Element.innerText.indexOf("Select") !== -1) {
+    let newInnerText = h1Element.innerText.replace('Select', 'Selectare ').replace('to change', 'pentru editare')
+    h1Element.innerText = newInnerText 
+}
+
+function getElementsByAttrib(attrib) {
+    return document.querySelectorAll('[' + attrib + ']');
+}
+var elements = getElementsByAttrib('type="submit"');
+// MySubmit = elements[0]
+console.log("elements",elements)
+
+for (element of elements) {
+    if (element.value === "Save") element.defaultValue = "Salvează" 
+    else if (element.value === "Save and add another") element.value = "Salvează și adaugă un alt obiect"
+    else if (element.value === "Save and continue editing") element.value = "Salvează și continuă editarea" 
+
+}
+
+const aElements = document.getElementsByTagName("a");
+console.log("aElements", aElements)
+
+var elementaaaas = document.getElementsByTagName("a");
+console.log(typeof(elementaaaas[0]))
+// var styles = window.getComputedStyle(elementaa,':after')
+// var content = styles['content'];
+// console.log("content", content)
+
+
+</script>
+{% endblock %}

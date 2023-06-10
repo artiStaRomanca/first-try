@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+body {
+  background-color: white;
+  /* background-color: rgb(61, 80, 108); */
+
+}
+
+#home {
+  position: fixed;
+  background-position: center right;
+  /* margin-left: 4vw; */
+  /* margin-top: 0; */
+  margin-left: 2vw;
+  /* background-color: rgb(61, 80, 108); */
+  /* background-blend-mode: lighten; */
+  /* height: 180vh; */
+  /* background-image: url("../images/me2.jpg"); */
+  background-image:  linear-gradient(
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)
+  ),url(../images/me2.jpg);
+  /* background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.6) 20vh, rgba(0,0,0,0.4) 30vh, #e5e5e594 50vh,  #e5e5e5c2 60vh,rgb(229 229 229) 90vw, #e5e5e5),url(../images/spring.jpg);
+  background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.6) 20vh, rgba(0,0,0,0.4) 30vh, #e5e5e594 50vh,  #e5e5e5c2 60vh,rgb(229 229 229) 90vw, #e5e5e5),url(../images/spring.jpg);
+  background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.6) 20vh, rgba(0,0,0,0.4) 30vh, #e5e5e594 50vh,  #e5e5e5c2 60vh,rgb(229 229 229) 90vw, #e5e5e5),url(../images/clock.jpg); */
+  /* background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.6) 20vh, rgba(0,0,0,0.4) 30vh, #e5e5e594 50vh,  #e5e5e5c2 60vh,rgb(229 229 229) 90vw, #e5e5e5),url(../images/orhidee.jpg); */
+  /* background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.6) 20vh, rgba(0,0,0,0.4) 30vh, #e5e5e594 50vh,  #e5e5e5c2 60vh,rgb(229 229 229) 90vw, #e5e5e5),url(../images/sunset.jpg); */
+  /* background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.6) 20vh, rgba(0,0,0,0.4) 30vh, #e5e5e594 50vh,  #e5e5e5c2 60vh,rgb(229 229 229) 90vw, #e5e5e5),url(../images/beachbar.jpg); */
+  background-size: cover;
+  height: 100vh;
+  width: 96vw;
+  background-attachment: fixed;
+  /* left: 8vw; */
+  /* background-color: #f7f9fb;
+  background-color: #efefef; */
+
+  /* position: fixed; 
+  top: 0; 
+  left: 0;  */
+	overflow :hidden;
+  /* Preserve aspet ratio */
+  /* min-width: 100%; */
+}

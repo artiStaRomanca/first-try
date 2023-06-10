@@ -1,0 +1,388 @@
+:root {
+    ----primary: #014040;
+
+    ----secondary: #F27405;
+    ----secondary: #D9AD2B;
+    ----ternary: #FFFFC8;
+    /* ----secondary: #F2668B; */
+    /* ----primary: #011F26; */
+    ----table-head: #90ABA1;
+    ----table-head: #014040;
+
+    ----table-row-odd: #e8f4f1;
+    ----table-row-even: #f2f7f6;
+    ----table-row-hover: #b3c8c3;    
+  }
+
+html, body, a {
+    font-family: Kurale !important;
+}
+
+#branding h1, #branding h1 a:link, #branding h1 a:visited {
+    color: var(----secondary);
+}
+
+#header {
+    background: var(----primary);
+    color: var(----secondary);
+}
+
+#header a:link, #header a:visited {
+    color: var(----secondary);
+    border: none;
+}
+
+#header a:hover {
+    color: #02735e;
+}
+
+div.breadcrumbs {
+    background: #02735e;
+    background: var(----primary);
+    color: var(----ternary) !important;
+}
+
+div.breadcrumbs a.active {
+    color: var(----ternary) !important;
+    font-weight: 300;
+}
+
+div.breadcrumbs a:focus, div.breadcrumbs a:hover {
+    color: var(----ternary) !important;
+    /* color: red !important; */
+    font-weight: 300;
+}
+
+.select2-container----admin-autocomplete .select2-results__option----highlighted[aria-selected] {
+    background-color: #292D32;
+}
+
+.paginator a:link, .paginator a:visited {
+    background: #292D32;
+}
+
+
+
+.module caption, 
+.inline-group h2 {
+    background: #02735e;
+    background: var(----table-head);
+    color: var(----secondary);
+
+}
+
+.module h2 {
+    background: #212121;
+    color: #ccc;
+}
+
+div#changelist-filter h2 {
+    background-color: blue !important;
+    background-color: var(----primary) !important;
+}
+
+div#changelist-filter  {
+    border-left: 2px solid var(----primary) !important;
+    /* padding: 0px 2px; */
+    background-color: var(----table-row-even) !important;
+}
+
+
+#user-tools a:focus, #user-tools a:hover {
+    border: 0;
+    color: #ddd;
+}
+
+#user-tools a:focus, #user-tools a:hover {
+    border: 0;
+    color: var(----ternary);
+}
+
+/* .selector-chosen h2 {
+    background: #02735e !important;
+}
+
+.calendar td.selected a {
+    background: #02735e !important;
+}
+
+.calendar td a:focus, .timelist a:focus,
+.calendar td a:hover, .timelist a:hover {
+    background: #02735e !important;
+} */
+
+#changelist-filter  {
+    height: 100% !important;
+}
+
+#changelist-filter li.selected a {
+    color: #444;
+}
+
+fieldset.collapsed .collapse-toggle {
+    color: #444;
+}
+
+
+
+a:link, a:visited {
+    color: #777;
+}
+
+.changelink {border-left: 1px double red !important; padding-left: 20px}
+
+/* .addlink {
+    border: 1px solid #70BF2B !important; 
+    color: black !important;
+    background-color: #70BF2B;
+    border-radius: 8px;
+} */
+
+a:focus, a:hover {
+    color: #999;
+}
+
+/*! HEADER */
+
+/*! BREADCRUMBS */
+
+.breadcrumbs a {color: #03A678 !important ;}
+div.breadcrumbs  {color: var(----secondary) !important ;}
+
+.breadcrumbs { 
+    border-top: 1px dotted var(----secondary) !important;
+    border-bottom: 4px double var(----secondary) !important;
+}
+
+textarea:focus, input:focus{
+    outline: 2px solid rgba(0,0,0,0.16) !important;
+}
+
+/*******************!  TABLES  *******************/
+
+table { 
+    font-family: Kurale !important;
+    border-collapse: separate !important;
+    border-spacing: 0 4px !important;
+}
+
+td { font-family: Kurale !important; }
+th { 
+    color: var(----ternary) !important;  
+    font-weight: normal !important;
+    font-family: Kurale !important;
+}
+
+th a { color: black !important; }
+
+td {vertical-align: middle !important;}
+td.original {vertical-align: top !important;}
+
+table thead th.sorted .sortoptions a.sortremove:focus:after,
+table thead th.sorted .sortoptions a.sortremove:hover:after {
+    color: #444;
+}
+
+tbody tr:nth-child(odd) { background-color: var(----table-row-odd); }
+tbody tr:nth-child(even) { background-color: var(----table-row-even); }
+tbody tr:hover { background-color: var(----table-row-hover); }
+
+
+
+/* #content-main tbody tr:nth-child(odd) { background-color: red; }
+table#result_list tbody tr:nth-child(odd) { background-color: blue; } */
+
+/* tr  {
+    border: 1px solid #5a6260 !important;
+    border-radius: 4px !important;
+    margin-top: 14px !important;
+} */
+
+thead > tr > th {
+    background-color: var(----table-head) !important;
+}
+
+
+thead > tr > th:hover {
+    background-color: var(----table-head) !important;
+}
+
+thead > tr > th a {
+    color: var(----ternary) !important;
+    font-weight: normal !important;
+}
+thead > tr > th a:hover {
+    border: none !important;
+    background-color: var(----table-head) !important;
+    color: var(----secondary) !important;
+}
+
+/*******************! INPUTS / FORMS *******************/
+
+input, select, textarea {
+    font-family: Kurale !important;
+}
+    
+
+/*******************! BUTTONS *******************/
+
+button { font-family: Kurale !important; }
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    background: var(----primary);
+}
+
+.button.default:hover, input[type=submit].default:hover {
+    background: #191D22;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #C8E6C9;
+    color: black !important;
+    border: 1px solid #81C784;
+    border-radius: 6px;
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover {
+    background: #66BB6A;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    background: #81C784;
+}
+
+.submit-row {
+    border: 2px solid var(----secondary) !important;
+    border: 2px solid black !important;
+    background-color: #F5F5F5 !important;
+    border-radius: 4px !important;
+}
+
+.model-details {
+    padding: 4px 8px !important;
+    border: 1px solid var(----secondary);
+    border-radius: 4px;
+    color: black !important;
+}
+
+.fa-cog {
+    color: var(----secondary) !important;
+}
+
+.model-add {
+    padding: 4px 8px !important;
+    border: 1px solid #03A678;
+    border-radius: 4px;
+    color: black !important;
+}
+
+.fa-plus {
+    color: #03A678 !important;
+}
+
+/*! MISC */
+
+a.active.selector-chooseall:focus, a.active.selector-clearall:focus,
+a.active.selector-chooseall:hover, a.active.selector-clearall:hover {
+    color: #999;
+}
+
+.calendar td a:active, .timelist a:active {
+    background: #444;
+}
+
+.change-list ul.toplinks .date-back a:focus,
+.change-list ul.toplinks .date-back a:hover {
+    color: #222;
+}
+
+.paginator a.showall:focus, .paginator a.showall:hover {
+    color: #222;
+}
+
+.paginator  {
+    color: var(----secondary) !important;
+    /* font-weight: bold; */
+    border-top: 2px solid var(----primary) !important;
+    border-bottom: 1px solid var(----primary) !important;
+
+}
+
+.paginator a:focus, .paginator a:hover {
+    background: #222;
+}
+
+#changelist-filter a:focus, #changelist-filter a:hover,
+#changelist-filter li.selected a:focus,
+#changelist-filter li.selected a:hover {
+    color: #222;
+}
+
+.calendar td a:active, .timelist a:active {
+    background: #292D32;
+    color: white;
+}
+
+.calendar caption, .calendarbox h2 {
+    background: #999;
+}
+
+.select2-container----admin-autocomplete .select2-results__option----highlighted[aria-selected] {
+    background-color: #292D32;
+}
+
+.object-tools a, .object-tools a {
+    background-color: var(----primary) !important;
+    color: var(----secondary) !important;
+    border-radius: 4px !important;
+}
+
+.object-tools a:focus, .object-tools a:hover {
+    background-color: #292D32;
+    border-radius: 4px !important;
+}
+
+input[type=file]::-webkit-file-upload-button:hover {
+    border: 0;
+    background: #292D32;
+}
+
+#changelist-filter {
+    top: -250px;
+    right: 15px;
+}
+
+#changelist-filter h2 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: var(----ternary) !important;
+}
+
+.colMS {margin: auto !important;}
+
+/* @media (max-width: 1104px) {
+    .colMS {margin: auto !important;}
+}
+
+@media (max-width: 1024px) {
+.colMS {margin: auto !important;}
+} */
+
+#toggle-nav-sidebar {
+    background-color: var(----secondary) !important;
+    border: none !important;
+}
+
+/* #nav-sidebar {
+    border-left: 2px double var(----secondary) !important;
+    border-right: 2px double var(----secondary) !important;
+} */
+
+#main h1 {color: var(----secondary) !important;  font-weight: bold;}
+
+.module {
+    /* background-color: blue!important; */
+    border: 2px solid #212121 !important;
+    border-radius: 2px !important;
+    padding: 3px !important;
+}

@@ -1,0 +1,19 @@
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'portofolio/css/project.css' %}"/>
+{% endblock %}
+
+<li>
+    <article class="project">
+        <a href="{% url 'portofolio:project-detail-page' project.slug %}"> 
+            <img src="{{ project.main_image.url }}" alt="{{ project.title }}">
+            <div class="project__content">
+                <h3>
+                    {{ project.title }}
+                </h3>
+                <p> {{ project.excerpt }} </p>
+            </div>
+        </a>
+    </article>
+</li>
